@@ -1,0 +1,73 @@
+## Visual Studio Build Artifacts & Output Directories
+[Bb]in/
+[Oo]bj/
+[LLEe]og/
+[Ll]ogs/
+[Tt]emp/
+[D3d]check/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+bld/
+[Bb]uild/
+[Aa]rtifacts/
+
+## Visual Studio Cache & User Settings Directories
+.vs/
+.idea/
+.vscode/
+
+## User-Specific Visual Studio Files
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.userprefs
+
+## Build Results & Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+
+## NuGet Package & Tool Caching
+*.nuget.props
+*.nuget.targets
+*.nuget.g.props
+*.nuget.g.targets
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+
+## Windows System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
