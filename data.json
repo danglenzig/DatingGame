@@ -1,0 +1,372 @@
+{
+  "char_list": [
+    {
+      "name": "Tony Stark",
+      "headline": "Genius billionaire playboy philanthropist seeking a partner who’s as sharp-witted and ambitious as the suits in my workshop. If saving the world sounds like your kind of date night, we might just click.",
+      "questions": [
+        {
+          "question_text": "Do you appreciate high-tech gadgets and frequent trips to the workshop?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you comfortable living life constantly in the public eye?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is a low-key, quiet lifestyle your ideal way to unwind?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you get easily rattled by high-pressure situations?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Are you opposed to a little friendly sarcasm and banter?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Would you be willing to help save the world on short notice?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is privacy a top priority that trumps all else?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you consider loyalty and trust non-negotiable in a relationship?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you uncomfortable around advanced AI personalities?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you prefer to avoid spontaneous adventures or missions?",
+          "correct_answer": "no"
+        }
+      ]
+    },
+    {
+      "name": "Bruce Banner / The Hulk",
+      "headline": "Genius scientist with a green alter ego looking for calm in chaos. If you can handle brains and brawn without losing your cool, let's smash stereotypes together.",
+      "questions": [
+        {
+          "question_text": "Are you comfortable living in remote or isolated places?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Can you remain calm under intense pressure or stress?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you okay with loud, sudden outbursts or disruptions?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you have a strong appreciation for science and intellectual conversation?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Would you mind if your partner occasionally loses control and smashes things unintentionally?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you prefer a predictable and routine lifestyle?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Are you willing to keep secrets to protect your partner’s privacy?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you dislike spending time outdoors or in nature?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Are you comfortable around intense physical strength and power?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Would you be unwilling to support your partner’s work in high-risk scientific experiments?",
+          "correct_answer": "no"
+        }
+      ]
+    },
+    {
+      "name": "Steve Rogers",
+      "headline": "A man out of time seeking someone with integrity and courage. Values loyalty, honor, and standing up for what's right—whether times are good or tough.",
+      "questions": [
+        {
+          "question_text": "Do you believe in fighting for justice even when it's unpopular?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you comfortable living without modern technology or constant connectivity?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Would you be willing to stand by your partner through extreme challenges and danger?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is being physically fit and active important to your lifestyle?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you enjoy partying late into the night and loud social gatherings?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Are you open to respecting traditions and values from the past?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is it acceptable to compromise your principles for personal gain?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you believe teamwork and trust are essential in relationships?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you comfortable with a low-profile, quiet lifestyle, away from the spotlight?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you think it's important to help those who can't help themselves?",
+          "correct_answer": "yes"
+        }
+      ]
+    },
+    {
+      "name": "Thor Odinson",
+      "headline": "God of Thunder, and yes, I do wield Mjolnir with style. Seeking a worthy companion who can weather storms—both literal and metaphorical—while sharing in grand adventure and the occasional feast.",
+      "questions": [
+        {
+          "question_text": "Do you enjoy grand adventures and facing danger head-on?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you comfortable with a little lightning now and then?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is avoiding battles and conflict your preferred way of life?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Would you pass up on an epic feast if invited?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you value humility and learning from your mistakes?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you someone who fears the responsibility of great power?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Is being away from your homeworld something you dread?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you prefer solitude over companionship and camaraderie?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Are you willing to embrace both strength and vulnerability?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you dislike the sound of a hammer striking anvil?",
+          "correct_answer": "no"
+        }
+      ]
+    },
+    {
+      "name": "Natasha Romanoff",
+      "headline": "Former spy seeking someone who understands shadows and secrets. Loyalty above all; life’s a mission, and trust is the rarest weapon. Can you be the partner I never knew I needed?",
+      "questions": [
+        {
+          "question_text": "Are you comfortable with a partner who has a complicated past?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you prefer a predictable, risk-free lifestyle?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Is loyalty and trustworthiness your highest priority in relationships?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Would you agree to keep personal details about our life private, even from close friends?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you uncomfortable with physical danger or frequent travel?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you enjoy working in a high-pressure environment with uncertain outcomes?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is it important that your partner avoids confrontation at all costs?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Are you willing to forgive mistakes made in the past if the intention was to protect others?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Would you choose to stay isolated rather than seek help from others during hard times?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you think emotional vulnerability is a sign of weakness?",
+          "correct_answer": "no"
+        }
+      ]
+    },
+    {
+      "name": "Wanda Maximoff",
+      "headline": "Reality-bending sorceress seeking someone who understands the complexities of loss and love. If you can keep up with a world where nothing is as it seems, we might just rewrite destiny together.",
+      "questions": [
+        {
+          "question_text": "Are you comfortable with the idea that reality can change around us?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is maintaining strict control over your emotions important to you?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you believe in fighting against oppression and standing up for the vulnerable?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you okay with a partner who might sometimes be misunderstood or feared by others?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you prefer a predictable and stable lifestyle without unexpected changes?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Can you handle situations where you might unintentionally cause harm?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is it important for you to keep your past completely separate from your present?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Do you think magic and supernatural abilities should always be hidden from the world?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Is it important that your partner is willing to fight for what's right, even at great personal cost?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you uncomfortable with intense emotional connections that can be overwhelming?",
+          "correct_answer": "no"
+        }
+      ]
+    },
+    {
+      "name": "Carol Danvers",
+      "headline": "Former Air Force pilot turned cosmic hero, always ready to light up the sky or stand her ground. Looking for someone who values courage, independence, and a little bit of starfire in their life.",
+      "questions": [
+        {
+          "question_text": "Are you comfortable with me spending extended time away from Earth on intergalactic missions?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you prefer quiet evenings over spontaneous adventures?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Is respecting personal boundaries and independence important to you in a relationship?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Are you open to partners who have a mysterious or complicated past?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Would you be willing to support me if I had to make difficult sacrifices for the greater good?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you believe in strictly following rules even when it means compromising your values?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Are you comfortable with a partner who might occasionally be unpredictable due to their powers?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you think it's okay to keep secrets from your partner to protect them?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Would you want to take the lead in making important decisions in the relationship?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Are you prepared to face significant challenges and dangers because of who I am?",
+          "correct_answer": "yes"
+        }
+      ]
+    },
+    {
+      "name": "Gamora",
+      "headline": "Deadliest woman in the galaxy seeks someone who values strength and redemption. Loyalty is earned, not given, and don’t expect me to tolerate betrayals. Ready to fight for what truly matters?",
+      "questions": [
+        {
+          "question_text": "Are you willing to face danger head-on and stand by me in battle?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you believe in absolute loyalty or think betrayal is sometimes acceptable?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is a peaceful and quiet life your priority over intergalactic conflicts?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Would you help me seek redemption for past mistakes?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is dishonesty or deception acceptable in achieving your goals?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Are you comfortable with a partner who has a complex and dark past?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Do you feel indifferent about the fate of the galaxy around you?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Can you handle someone who demands discipline and excellence?",
+          "correct_answer": "yes"
+        },
+        {
+          "question_text": "Is emotional vulnerability a weakness to you?",
+          "correct_answer": "no"
+        },
+        {
+          "question_text": "Are you willing to forgive but not forget the sins committed against you?",
+          "correct_answer": "yes"
+        }
+      ]
+    }
+  ]
+}
