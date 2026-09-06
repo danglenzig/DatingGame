@@ -1,10 +1,7 @@
 ﻿using DatingGame.JsonTools;
 using DatingGame.Models;
 using System;
-//using System.Xml.Serialization;
 using System.Net.Http.Json;
-//using static System.Runtime.InteropServices.JavaScript.JSType;
-
 
 namespace DatingGame
 {
@@ -18,7 +15,6 @@ namespace DatingGame
 
         Characters? CHARACTERS = CharacterDataReader.ReadCharactersFromFile();
 
-        //private Dictionary<int, string> CHAR_DICT = new Dictionary<int, string>();
         private Dictionary<int, string> CHAR_DICT = new Dictionary<int, string>
         {
             {1, "Tony Stark" },
@@ -84,7 +80,7 @@ namespace DatingGame
 
         async private Task<string> TryGetResult(string player_name)
         {
-            string result = "FOO"; // placeholder
+            string result = "FOO";
             List<ScoreEntry>? scores_list = new List<ScoreEntry>();
 
             if (CHARACTERS == null)
@@ -110,9 +106,6 @@ namespace DatingGame
             }
 
             int input_number = -1;
-
-            
-
             while (input_number < 1 || input_number > CHARACTERS.CharList.Count)
             {
                 Console.WriteLine($"\nFor which character?\n");
@@ -138,7 +131,7 @@ namespace DatingGame
                     List<ScoreEntry> candidate_scores = new List<ScoreEntry>();
                     foreach (ScoreEntry entry in scores_list)
                     {
-                        string name_str = $"{player_name}'s % dating compatability with {choice_name}";
+                        string name_str = $"*** {player_name}'s % dating compatability with {choice_name} ***";
                         if (entry.Name == name_str)
                         {
                             candidate_scores.Add(entry);
@@ -163,8 +156,6 @@ namespace DatingGame
                     }
 
                     return $"{best_score_entry.Name}: {best_score_entry.Score}";
-
-
                 }
                 else break;
             }
@@ -201,20 +192,19 @@ namespace DatingGame
                     if (input_number_str == "quit") Environment.Exit(0);
                     players_answer = Convert.ToInt32(input_number_str);
                 }
-                //string answer_str = "";
                 float question_score = -1.0f;
                 switch (players_answer)
                 {
                     case 1:
-                        //answer_str = "yes";
+                        // "yes";
                         question_score = answer_text == "yes" ? 2.0f : 0.0f;
                         break;
                     case 2:
-                        //answer_str = "no";
+                        // "no";
                         question_score = answer_text == "yes" ? 0.0f : 2.0f;
                         break;
                     case 3:
-                        //"maybe";
+                        // "maybe";
                         question_score = 1.0f;
                         break;
                     default:
@@ -228,9 +218,6 @@ namespace DatingGame
 
         public async Task RunGame()
         {
-
-            Console.WriteLine(CHARACTERS.CharList.Count);
-
             if (CHARACTERS == null)
             {
                 Console.WriteLine("### Program Error: Failed read from file");
@@ -251,29 +238,12 @@ namespace DatingGame
                 Console.WriteLine(CharacterListDisplay.DisplayText);
                 Console.Write("Enter a number --> ");
 
-                string input_number_str = Console.ReadLine()!;
-                
-                //if (input_number_str == "quit") Environment.Exit(0);
-
-                /*
-                if (input_number_str == "get score")
-                {
-                    string score = await TryGetResult(player_name);                    
-
-                    Console.WriteLine(score);
-                    Environment.Exit(0); // <-- but the program does exit.
-                }
-                */
-                
-
+                string input_number_str = Console.ReadLine()!;                
                 input_number = Convert.ToInt32(input_number_str);
 
                 
                 if (input_number == CHARACTERS.CharList.Count + 1)
                 {
-
-                    Console.WriteLine("FOOOOOOOOOOOOOO");
-
                     string score = await TryGetResult(player_name);
                     Console.WriteLine(score);
                     Environment.Exit(0);
@@ -296,7 +266,7 @@ namespace DatingGame
 
                     string scoreboard_string = $"{player_name}'s % dating compatability with {choice_name}";
 
-                    Console.WriteLine($"\n{player_name}'s dating compatability with {choice_name} is {score * 100}%\n\n");
+                    Console.WriteLine($"\n*** {player_name}'s dating compatability with {choice_name} is {score * 100}% ***\n\n");
 
                     int int_score = (int)Math.Round(score * 100, 0);
 
