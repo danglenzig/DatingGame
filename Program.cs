@@ -1,14 +1,15 @@
 ﻿// Program entry point
 
+using DatingGame;
 using DatingGame.JsonTools;
 using DatingGame.Models;
 using System;
 //using System.Xml.Serialization;
 using System.Net.Http.Json;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+//using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
-
+/*
 string scoreBoardPostEndpoint = "https://hooks.zapier.com/hooks/catch/8338993/ujs9jj9/";
 string scoreBoardGetEndpoint = "https://script.google.com/macros/s/AKfycbys5aEPMvNCutyhNYYCcQcCjzsi2UtqNspmKyCH-AicJxJbCJMrAoT0LUaYaXhTWA8n/exec";
 
@@ -125,57 +126,7 @@ float AskQuestions(string player_name, DatingProfile profile)
     float percent_score = player_score / max_correct;
     return MathF.Round(percent_score, 2);
 }
+*/
 
-while (true)
-{
-    Console.Write("Enter your name --> ");
-    string player_name = Console.ReadLine()!;
-    if (player_name == "quit") Environment.Exit(0);
-
-    int input_number = -1;
-
-    while (input_number < 1 || input_number > 6)
-    {
-        Console.WriteLine($"\nWhich character from the Marvel Cinematic Universe are you tryna' date, {player_name}?\n");
-        Console.WriteLine(CharacterListDisplay.DisplayText);
-        Console.Write("Enter a number --> ");
-        
-        string input_number_str = Console.ReadLine()!;
-        if (input_number_str == "quit") Environment.Exit(0);
-
-        input_number = Convert.ToInt32(input_number_str);
-        if (input_number >= 1 && input_number <= 6)
-        {
-            string choice_name = char_dict[input_number];
-            DatingProfile? profile = characters.CharList.Find(p => p.Name == choice_name);
-            
-            if (profile == null) break;
-            float score = AskQuestions(player_name, profile);
-
-            string scoreboard_string = $"{player_name}'s % dating compatability with {choice_name}";
-
-            Console.WriteLine($"\n{player_name}'s dating compatability with {choice_name} is {score*100}%\n\n");
-
-            int int_score = (int)Math.Round(score*100, 0);
-
-
-            WriteToScoreboard(scoreboard_string ,int_score);
-
-            break;
-
-
-        }
-        else break;
-    }
-
-    
-
-    //Console.WriteLine(charListDisplay);
-
-    //Console.Write("Enter a number --> ");
-    //string choice_input = Console.ReadLine()!;
-
-    //if (choice_input == "quit") break;
-
-
-}
+Game game = new Game();
+await game.RunGame();

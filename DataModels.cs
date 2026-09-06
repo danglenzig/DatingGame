@@ -42,7 +42,7 @@ namespace DatingGame.Models
 
     public static class CharacterListDisplay
     {
-        public static string DisplayText = "1. Iron Man\n2. The Black Widow\n3. Thor\n4. The Scarlet Witchl\n5. The Hulk\n6. Gamora\n\n";
+        public static string DisplayText = "1.  Iron Man\n2.  The Black Widow\n3.  Thor\n4.  The Scarlet Witch\n5.  The Hulk\n6.  Gamora\n7.  Captain America\n8.  Captain Marvel\n9.  (get score)\n10. (quit)\n\n";
     }
 
     public static class GameTitleDisplay
