@@ -7,6 +7,8 @@ using System;
 using System.Net.Http.Json;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
+
+
 string scoreBoardPostEndpoint = "https://hooks.zapier.com/hooks/catch/8338993/ujs9jj9/";
 string scoreBoardGetEndpoint = "https://script.google.com/macros/s/AKfycbys5aEPMvNCutyhNYYCcQcCjzsi2UtqNspmKyCH-AicJxJbCJMrAoT0LUaYaXhTWA8n/exec";
 
@@ -19,14 +21,6 @@ if (characters == null)
     Console.WriteLine("### Program Error: Failed read from file");
     return;
 }
-
-//Console.WriteLine(characters.CharList[0].Name);
-//Console.WriteLine(characters.CharList[0].Headline);
-//Console.WriteLine(characters.CharList[0].Questions[0].QuestionText);
-//Console.WriteLine(characters.CharList[0].Questions[0].CorrectAnswer);
-
-//bool isQuit = false;
-//string charListDisplay = CharacterListDisplay.DisplayText;
 
 Dictionary<int,string> char_dict = new Dictionary<int,string>();
 char_dict[1] = "Tony Stark";
