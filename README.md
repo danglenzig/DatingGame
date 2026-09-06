@@ -18,18 +18,6 @@ A console-based compatibility quiz game featuring Marvel Cinematic Universe char
 - Async/await patterns for non-blocking network calls
 - JSON serialization/deserialization for API communication
 
-## How to Run
-
-### Build
-```bash
-dotnet build
-```
-
-### Run
-```bash
-dotnet run
-```
-
 ## Project Structure
 
 - `Program.cs` - Application entry point
