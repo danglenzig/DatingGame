@@ -131,7 +131,7 @@ namespace DatingGame
                     List<ScoreEntry> candidate_scores = new List<ScoreEntry>();
                     foreach (ScoreEntry entry in scores_list)
                     {
-                        string name_str = $"*** {player_name}'s % dating compatability with {choice_name} ***";
+                        string name_str = $"{player_name}'s % dating compatability with {choice_name}";
                         if (entry.Name == name_str)
                         {
                             candidate_scores.Add(entry);
@@ -155,7 +155,7 @@ namespace DatingGame
                         }
                     }
 
-                    return $"{best_score_entry.Name}: {best_score_entry.Score}";
+                    return $"*** {best_score_entry.Name}: {best_score_entry.Score} ***";
                 }
                 else break;
             }
