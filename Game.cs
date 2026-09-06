@@ -21,12 +21,14 @@ namespace DatingGame
         //private Dictionary<int, string> CHAR_DICT = new Dictionary<int, string>();
         private Dictionary<int, string> CHAR_DICT = new Dictionary<int, string>
         {
-            {1, "Tony StarK" },
+            {1, "Tony Stark" },
             {2, "Natasha Romanoff" },
             {3, "Thor Odinson" },
             {4, "Wanda Maximoff" },
             {5, "Bruce Banner / The Hulk" },
             {6, "Gamora" },
+            {7, "Steve Rogers"},
+            {8, "Carol Danvers" },
         };
 
         private bool TryPostScoreData(ScoreEntry data)
@@ -63,6 +65,110 @@ namespace DatingGame
                 Console.WriteLine("\nThere was a problem posting your score.");
                 return;
             }
+        }
+
+        async Task<List<ScoreEntry>?> TryGetScoresList()
+        {
+            List<ScoreEntry>? scoresList = new List<ScoreEntry>();
+
+            try
+            {
+                scoresList = await CLIENT.GetFromJsonAsync<List<ScoreEntry>>(SCOREBOARD_GET_ENDPOINT);
+                return scoresList;
+            }
+            catch
+            {
+                return scoresList;
+            }
+        }
+
+        async private Task<string> TryGetResult(string player_name)
+        {
+            string result = "FOO"; // placeholder
+            List<ScoreEntry>? scores_list = new List<ScoreEntry>();
+
+            if (CHARACTERS == null)
+            {
+                Console.WriteLine($"### Game: the character catalogue is empty or null");
+                return result;
+            }
+
+            try
+            {
+                scores_list = await TryGetScoresList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"### Game: there was a roblem getting the scores list: {e}");
+                return result;
+            }
+
+            if ((scores_list != null && scores_list.Count <= 0) || scores_list == null)
+            {
+                Console.WriteLine($"### Game: the scores list is empty or null");
+                return result;
+            }
+
+            int input_number = -1;
+
+            
+
+            while (input_number < 1 || input_number > CHARACTERS.CharList.Count)
+            {
+                Console.WriteLine($"\nFor which character?\n");
+                Console.WriteLine(CharacterListDisplay.DisplayText);
+                Console.Write("Enter a number --> ");
+
+                string input_number_str = Console.ReadLine()!;
+                if (input_number_str == "quit") Environment.Exit(0);
+
+                input_number = Convert.ToInt32(input_number_str);
+
+                if (input_number >= 1 && input_number <= CHARACTERS.CharList.Count)
+                {
+                    string choice_name = CHAR_DICT[input_number];
+                    
+                    DatingProfile? profile = CHARACTERS.CharList.Find(p => p.Name == choice_name);
+                    if (profile == null)
+                    {
+                        Console.WriteLine($"Game: there was a problem getting the profile for {choice_name}");
+                        return result;
+                    }
+
+                    List<ScoreEntry> candidate_scores = new List<ScoreEntry>();
+                    foreach (ScoreEntry entry in scores_list)
+                    {
+                        string name_str = $"{player_name}'s % dating compatability with {choice_name}";
+                        if (entry.Name == name_str)
+                        {
+                            candidate_scores.Add(entry);
+                        }
+                    }
+
+                    if (candidate_scores.Count <= 0)
+                    {
+                        Console.WriteLine($"### Game: {player_name} has no score record for {choice_name} yet.");
+                        return result;
+                    }
+
+                    int highest_score = 0;
+                    ScoreEntry best_score_entry = new ScoreEntry();
+
+                    foreach (ScoreEntry entry in candidate_scores)
+                    {
+                        if (entry.Score > highest_score)
+                        {
+                            best_score_entry = entry;
+                        }
+                    }
+
+                    return $"{best_score_entry.Name}: {best_score_entry.Score}";
+
+
+                }
+                else break;
+            }
+            return result;
         }
 
         private float AskQuestions(string player_name, DatingProfile profile)
@@ -120,8 +226,11 @@ namespace DatingGame
             return MathF.Round(percent_score, 2);
         }
 
-        public void RunGame()
+        public async Task RunGame()
         {
+
+            Console.WriteLine(CHARACTERS.CharList.Count);
+
             if (CHARACTERS == null)
             {
                 Console.WriteLine("### Program Error: Failed read from file");
@@ -136,17 +245,48 @@ namespace DatingGame
 
             int input_number = -1;
 
-            while (input_number < 1 || input_number > 6)
+            while (input_number < 1 || input_number > CHARACTERS.CharList.Count)
             {
                 Console.WriteLine($"\nWhich character from the Marvel Cinematic Universe are you tryna' date, {player_name}?\n");
                 Console.WriteLine(CharacterListDisplay.DisplayText);
                 Console.Write("Enter a number --> ");
 
                 string input_number_str = Console.ReadLine()!;
-                if (input_number_str == "quit") Environment.Exit(0);
+                
+                //if (input_number_str == "quit") Environment.Exit(0);
+
+                /*
+                if (input_number_str == "get score")
+                {
+                    string score = await TryGetResult(player_name);                    
+
+                    Console.WriteLine(score);
+                    Environment.Exit(0); // <-- but the program does exit.
+                }
+                */
+                
 
                 input_number = Convert.ToInt32(input_number_str);
-                if (input_number >= 1 && input_number <= 6)
+
+                
+                if (input_number == CHARACTERS.CharList.Count + 1)
+                {
+
+                    Console.WriteLine("FOOOOOOOOOOOOOO");
+
+                    string score = await TryGetResult(player_name);
+                    Console.WriteLine(score);
+                    Environment.Exit(0);
+                }
+
+                if (input_number == CHARACTERS.CharList.Count + 2)
+                {
+                    Console.WriteLine("Bye!");
+                    Environment.Exit(0);
+                }
+
+
+                if (input_number >= 1 && input_number <= CHARACTERS.CharList.Count)
                 {
                     string choice_name = CHAR_DICT[input_number];
                     DatingProfile? profile = CHARACTERS.CharList.Find(p => p.Name == choice_name);

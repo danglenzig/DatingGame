@@ -9,7 +9,7 @@ using System.Net.Http.Json;
 //using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
-
+/*
 string scoreBoardPostEndpoint = "https://hooks.zapier.com/hooks/catch/8338993/ujs9jj9/";
 string scoreBoardGetEndpoint = "https://script.google.com/macros/s/AKfycbys5aEPMvNCutyhNYYCcQcCjzsi2UtqNspmKyCH-AicJxJbCJMrAoT0LUaYaXhTWA8n/exec";
 
@@ -126,6 +126,7 @@ float AskQuestions(string player_name, DatingProfile profile)
     float percent_score = player_score / max_correct;
     return MathF.Round(percent_score, 2);
 }
+*/
 
 Game game = new Game();
-game.RunGame();
+await game.RunGame();
